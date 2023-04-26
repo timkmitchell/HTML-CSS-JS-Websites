@@ -1,0 +1,710 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&family=Bruno+Ace+SC&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	overflow-x: hidden;
+}
+
+:root{		
+	/*Colors*/
+	--pri-clr: #5a2565;
+	--pricomp-clr: #736110;
+	--sec-clr: #067a75;
+	--opac-clr: #ffffff5A;
+}
+
+button, input[type=submit]{
+	padding: 8px 1rem;
+	color: #fff;
+	background: var(--pricomp-clr);
+	border-radius: 5px;
+	border-color: transparent;
+	box-shadow: 0px 5px 8px #7361107A;
+	transition: .5s;
+}
+
+button:hover, input[type=submit]:hover {
+	color: var(--pri-clr);
+	background: #fff;
+	box-shadow: 0px 5px 8px #7361107A inset;
+	cursor: pointer;
+}
+
+/*---Fonts---*/
+
+.hero h1, label, .quote span, .resources h1, 
+.contact-card h1, .what-sum h1, .what-img h1{
+	font-family: "Dancing Script";
+	font-weight: 300;
+}
+
+.hero h3, nav li, input[type=submit],
+button, .quote p, .res-card h1, .res-card h3, 
+.who-sum h1, .res-card li, .contact-card p,
+.what-img h1{
+	font-family: "Bruno Ace SC";
+	font-weight: 300;
+}
+
+.who-sum p, .res-card p, .contact-card span, 
+textarea, input[type=text], .what-sum p, .minibanner p,
+.what-carousel h3{
+	font-family: "Roboto";
+	letter-spacing: .5px;
+	word-spacing: 3px;
+}
+
+/*---Media Queries---*/
+
+/*---Navigation Bar---*/
+
+header{
+	z-index: 10;
+	width: 100%;
+	min-height: 14rem;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem 6rem;
+	top: 0;
+	background: #fff;
+ 	border-bottom-style: solid;
+  	border-bottom-color: grey;
+	border-width: 2px;
+	overflow: hidden;
+}
+
+.nav-img{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	background: var(--sec-clr);
+	border-radius: 5px;
+	box-shadow: 0 0 2px 3px grey inset;
+}
+
+.nav-img a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fff;
+	box-shadow: 0 0 8px 5px grey;
+}
+
+.nav-img img{
+	width: 60%;
+	transition: .5s;
+}
+
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+}
+
+.navigation{
+	list-style: none;
+	margin: auto;
+}
+
+.navigation li{
+	color: black;
+	display: inline-block;
+	padding: 24px 24px;
+	cursor: pointer;
+}
+
+.navigation li:hover {
+	color: var(--pri-clr);
+	border-bottom: 2px var(--pri-clr) solid;
+}
+
+.active{
+	
+}
+
+/*---Body---*/
+.page{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	overflow: hidden;
+}
+
+	/*Hero Page*/
+
+.hero{
+	margin-top: 5%;
+	height: 90vh;
+	text-align: center;
+	background: url("photos/bannerimg.jpg");
+	background-repeat: no-repeat;
+	background-size: 120%;
+	background-attachment: fixed;
+	background-position: bottom center;
+}
+
+.parallax{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: auto;
+}
+
+.parallax img#tit{
+	position: fixed;
+}
+
+.parallax img#tit1{
+	position: fixed;
+}
+
+.parallax img#tit2{
+	position: fixed;
+}
+
+.titimg{
+	margin-left: -10%;
+	width:15%;
+}
+
+.titimg2{
+	margin-left: 10%;
+	width:15%;
+}
+
+.titimg3{
+	z-index: 3;
+	width:15%;
+}
+
+.hero-sum{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20%;
+
+}
+
+.hero h1{
+	z-index: 3;
+	padding: 8px;
+	color: var(--pri-clr);
+	font-size: 4rem;
+	background: var(--opac-clr);
+	border-radius: 5px;
+}
+
+.hero h3{
+	z-index: 3;
+	width: 80%;
+	padding: 8px;
+	color: #fff;
+	font-size: 2rem;
+	text-shadow: 2px 2px var(--sec-clr);
+	background: var(--opac-clr);
+	border-radius: 5px;
+}
+
+.don-banner{
+	z-index: 3;
+	padding: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	margin-top: auto;
+	width: 100%;
+	background: var(--opac-clr);
+	
+}
+
+label{
+	font-size: 2rem;
+	color: var(--pri-clr);
+}
+
+input[type=text]{
+	text-align: right;
+	padding: 8px;
+	border-radius: 5px;
+}
+
+/*Who Page*/
+
+.who{
+	min-height: 100vh;
+	background: var(--sec-clr);
+	padding: 5%;
+}
+
+.who iframe{
+	z-index: 4;
+	align-items: center;
+	justify-content: flex-start;
+	width: 85vw; 
+	height: 50vh;
+	border-style: solid;
+	border-radius: 5px;
+	box-shadow: 3px 3px 1px 10px black;
+}
+
+.who-sum{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5%;
+}
+
+.who-title{
+	display: flex;
+	flex: 50%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.who-story{
+	display: flex;
+	flex: 50%;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.who-sum h1{
+	z-index: 4;
+	margin-top: -5%;
+	padding: 8px;
+	color: #fff;
+	text-shadow: 2px 2px var(--pri-clr);
+	font-size: 4rem;
+	text-align: center;
+	background: var(--opac-clr);
+	border-radius: 5px;
+	transform: rotateX(45deg);
+	box-shadow: 3px 3px 1px 10px black;
+}
+
+.who-sum img{
+	padding-top: 8px;
+	border-style: solid;
+	border-radius: 5px;
+	width: 30%;
+}
+
+.who-sum p{
+	z-index: 3;
+	margin: 0% 16%;
+	padding: 2rem 4rem;
+	color: black;
+	font-size: 1rem;
+	border-radius: 5px;
+	background: var(--opac-clr);
+	box-shadow: 3px 3px 1px 10px black;
+}
+
+	/*What Page*/
+
+.what{
+	min-height: 100vh;
+	padding: 5%;
+}
+
+.what-sum{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 8px;
+}
+
+.what-sum h1{
+	margin-bottom: 8px;
+	font-size: 4rem;
+	color: var(--pri-clr);
+}
+
+.what-sum p{
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+.what-carousel{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 60%;
+	overflow: hidden;
+}
+
+.what-img{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.what-img h1{
+	font-size: 4rem;
+	padding: 1rem;
+	text-shadow: 2px 2px var(--pricomp-clr);
+}
+
+.what-carousel h3{
+	color: var(--sec-clr);
+	font-weight: 300;
+}
+
+	/*Quote Page*/
+
+.quote{
+	flex-direction: row;
+	min-height: 10vh;
+	background: var(--sec-clr);
+}
+
+.quote-sum{
+	padding: 5%;
+	display: flex;	
+	flex: 60%;
+	text-align: right;
+	align-items: center;
+	justify-content: center;
+}
+
+.quote-sum p{
+	padding: 5%;
+	font-size: 24px;
+	color: #fff;
+}
+
+.quote-sum span{
+	color: var(--pri-clr);
+}
+
+.quote-img{
+	display: flex;
+	flex: 40%;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+/*Resources Page*/
+
+.resources{
+	min-height: 100vh;
+	padding: 5%;
+}
+
+.res-sum{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.res-img{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	background: var(--sec-clr);
+	border-radius: 5px;
+	box-shadow: 0 0 2px 3px grey inset;
+}
+
+.res-sum img{
+	width: 80%;
+	background: #fff;
+	box-shadow: 0 0 8px 5px grey;
+}
+
+.res-sum h1{
+	color: var(--pri-clr);
+	font-size: 4rem;
+}
+
+.res-cont{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	padding: 5%;
+}
+
+.res-card{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: var(--opac-clr);
+	width: 45%;
+	padding: 2rem 4rem;
+	border-radius: 5px;
+	box-shadow: 3px 3px 1px 10px black;
+}
+
+.res-card h1{
+	padding: 8px;
+	color: #fff;
+	font-size: 24px;
+	text-align: center;
+	text-shadow: 2px 2px var(--sec-clr);
+	background: var(--pricomp-clr);
+	border-radius: 5px;
+}
+
+.res-card p{
+	padding: 8px;
+}
+
+.res-card li{
+	padding: 4px;
+}
+
+/*Contact Page*/
+
+.contact{
+	height: 85vh;
+	flex-direction: row;
+	padding: 5%;
+}
+
+.contact-card, .contact-frm{
+	display: flex;
+	flex: 50%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.contact-card h1{
+	font-size: 4rem;
+	color: var(--pri-clr);
+}
+
+.contact-card p{
+	padding: 8px;
+	font-size: 24px;
+}
+
+.contact-card span{
+	padding: 8px;
+	font-size: 1rem;
+}
+
+.icons{
+	padding: 8px;
+	display: flex;
+	gap:1rem;
+}
+
+.icons a{
+	color: var(--pri-clr);
+}
+
+.icons a:hover {
+	color: var(--sec-clr);
+}
+
+.contact-frm form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	width: 100%;
+}
+
+.frm{
+	display: flex;
+	width: 60%;
+	gap: 8px;
+}
+
+.contact-frm input[type=text]{
+	width: 60%;
+	text-align: left;
+	padding: 8px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 2px solid black;
+	border-radius: 0px;
+}
+
+.contact-frm textarea{
+	height: 150px;
+	width: 60%;
+	text-align: left;
+	padding: 8px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 2px solid black;
+	border-radius: 0px;
+}
+
+/*---Footer---*/
+
+.minibanner{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1rem;
+	background: var(--pri-clr);
+}
+
+.minibanner p{
+	color: #fff;
+}
+
+/*---Animations---*/
+
+/*---Image Carousel---*/
+
+/* ----- carousel content stylings ----- */
+
+/* ----- slideshow stylings ----- */
+.slideshow {
+    height: 100%;
+    overflow: hidden; /* to hide slides in x-direction */
+    position: relative;
+}
+/* wrapper which wraps all the slideshow images stylings */
+.slideshow-wrapper {
+    display: flex;
+    /* We give it width as 400% because we are making a 
+       4 image carousel. If you want to make for example, 
+       5 images carousel, then give width as 500%. */
+    width: 600%;
+    height: 100%;
+    position: relative;
+    /* you can change the animation settings from below */
+    animation: slideshow 40s infinite;
+ }
+/* define width and height for images*/
+.slide {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide-img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover; 
+}
+/* @keyframes are used to provide animations
+   We make these settings for 4 image carousel.
+   Make modification according to your needs. */
+@keyframes slideshow {
+    0%  { left: 0; }
+    5%  { left: 0; }
+    10% { left: -100%; }
+    15% { left: -200%; }
+    20%	{ left: -200%; }
+    25% { left: -300%; }
+    30% { left: -400%; }
+    40% { left: -400%; }
+    45% { left: -500%; }
+    55% { left: -400%; }
+    60% { left: -400%; }
+    65% { left: -300%; }
+    70% { left: -200%; }
+    75% { left: -200%; }
+    85% { left: -100%; }
+    90% { left: 0%; }
+}
+/* ----- end of slideshow stylings ----- */
+
+/* ----- carousel control buttons stylings ----- */
+.slide-btn {
+    background-color: var(--opac-clr);
+    border-radius: 5px;
+    border: .2rem solid var(--sec-clr);
+    width: 1rem;
+    height: 1rem;
+    outline: none;
+    cursor: pointer;
+    /* stylings for positioning the buttons at
+       the bottom of the carousel */
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+}
+/* As we provide position as absolute, 
+the buttons places one over the other. 
+So, we have to place them individually
+at their correct positions. */
+.slide-btn-1 {
+    left: 40%;
+}
+.slide-btn-2 {
+    left: 45%;
+}
+.slide-btn-3 {
+    left: 50%;
+}
+.slide-btn-4 {
+    left: 55%;
+}
+.slide-btn-5 {
+    left: 60%;
+}
+.slide-btn-6 {
+    left: 65%;
+}
+
+/* When we focus on the particular button, 
+the animation stops to that particular image 
+to which the button is associated. */
+.slide-btn-1:focus~.slideshow-wrapper {
+    animation: none;
+    left: 0;
+}
+.slide-btn-2:focus~.slideshow-wrapper {
+    animation: none;
+    left: -100%;
+}
+.slide-btn-3:focus~.slideshow-wrapper {
+    animation: none;
+    left: -200%;
+}
+.slide-btn-4:focus~.slideshow-wrapper {
+    animation: none;
+    left: -300%;
+}
+
+.slide-btn-5:focus~.slideshow-wrapper {
+    animation: none;
+    left: -400%;
+}
+
+.slide-btn-6:focus~.slideshow-wrapper {
+    animation: none;
+    left: -500%;
+}
+
+/* when we focus on the button, the background color changes */
+.slide-btn:focus {
+    background-color: var(--pri-clr);
+}
