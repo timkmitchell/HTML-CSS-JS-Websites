@@ -1,2 +1,2 @@
 # HTML-CSS-JS-Websites
-Custom sites created using only a combination of HTML/CSS/JavaScript.
+Custom sites created using a combination of HTML/CSS/JavaScript.
